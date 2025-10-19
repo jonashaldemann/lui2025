@@ -108,6 +108,9 @@ body {
 }
 
 /* --- Responsive --- */
-@media (max-width:600px) {
-    .card-container { grid-template-columns:1fr; }
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        justify-items: center; /* sorgt dafür, dass auch eine einzelne Kachel mittig steht */
+    }
 }
