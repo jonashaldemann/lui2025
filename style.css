@@ -1,22 +1,41 @@
+/* --- Nudica Light --- */
 @font-face {
     font-family: 'Nudica';
     src: url('fonts/nudica-light-webfont.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 }
 
-body {
-    font-family: 'Nudica', Arial, sans-serif;
+/* --- Nudica Medium --- */
+@font-face {
+    font-family: 'Nudica';
+    src: url('fonts/nudica-medium-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
 }
 
+/* --- Seite allgemein --- */
+body {
+    font-family: 'Nudica', Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
 
-.header p {
-    margin: 10px 0;
-    line-height: 1.6;
+/* --- Header / erste Zeile mit Medium --- */
+.header p:first-child {
+    font-weight: 500;  /* nutzt Nudica Medium */
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* --- Rest bleibt Light --- */
+.header p:not(:first-child) {
+    font-weight: 300;  /* nutzt Nudica Light */
     font-size: 16px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    line-height: 1.6;
 }
 
 /* --- Card Container --- */
