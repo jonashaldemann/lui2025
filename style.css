@@ -33,6 +33,7 @@ body {
 }
 
 .card {
+    position: relative;
     background-color: #fff;
     border-radius: 16px;
     overflow: hidden;
@@ -52,6 +53,17 @@ body {
 .card-content { padding: 15px 12px; text-align:center; }
 .card h3 { font-size:18px; color:#222; margin:12px 0 6px 0; }
 .card p { font-size:14px; color:#555; line-height:1.5; margin:0; }
+
+/* --- Play-Button --- */
+.play-button {
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: rgba(255,255,255,0.9);
+    cursor: pointer;
+    pointer-events: auto;
+}
 
 /* --- Overlay --- */
 .overlay {
