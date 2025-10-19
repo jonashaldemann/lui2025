@@ -11,16 +11,14 @@ function playVideo(id) {
 function openVideo(url) {
     const overlay = document.getElementById('video-overlay');
     const iframe = document.getElementById('overlay-video');
-    iframe.src = url + "?autoplay=1"; // Video startet automatisch
+    iframe.src = url + "?autoplay=1&controls=1&rel=0";
     overlay.style.display = 'flex';
 }
 
 function closeVideo(event) {
-    // Verhindert, dass Klick im Video das Overlay schließt
-    if (event.target.id === 'overlay-video') return;
-
+    event.stopPropagation(); // Klick nur für das Target
     const overlay = document.getElementById('video-overlay');
     const iframe = document.getElementById('overlay-video');
-    iframe.src = ""; // stoppt das Video
+    iframe.src = "";
     overlay.style.display = 'none';
 }
