@@ -26,10 +26,10 @@ body {
 /* --- Cards --- */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 260px));
     gap: 25px;
     margin-top: 40px;
-    justify-items: center;
+    justify-content: center; /* sorgt dafür, dass Kacheln mittig stehen */
 }
 
 .card {
