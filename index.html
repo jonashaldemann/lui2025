@@ -14,8 +14,10 @@
         <p>Liebe Gruess<br>Götti Jonas</p>
     </div>
 
+    
     <div class="card-container">
-        <div class="card" onclick="openVideo('https://www.youtube.com/embed/dHBRFGmZP7Y')">
+        <!-- Card1 -->
+        <div class="card" onclick="openVideo('dHBRFGmZP7Y')">
             <img src="images/technorama.jpg" alt="Technorama">
             <div class="card-content">
                 <h3>Technorama</h3>
@@ -23,22 +25,23 @@
             </div>
         </div>
 
-        <div class="card" onclick="openVideo('https://www.youtube.com/embed/OBMTVTehNlI')">
-            <img src="bild2.jpg" alt="Bild 2">
+        <!-- Card2 -->
+        <div class="card" onclick="openVideo('OBMTVTehNlI')">
+            <img src="images/verkehrshaus.jpg" alt="Bild 2">
             <div class="card-content">
                 <h3>Verkehrshaus Luzern</h3>
                 <p>Kurze Beschreibung der zweiten Idee.</p>
             </div>
         </div>
- 
-        <!-- Weitere Cards hier hinzufügen -->
     </div>
 
     <!-- Overlay -->
     <div id="video-overlay" class="overlay" onclick="closeVideo(event)">
         <div class="overlay-content">
             <span class="close-btn" onclick="closeVideo(event)">&times;</span>
-            <iframe id="overlay-video" src="" frameborder="0" allowfullscreen></iframe>
+            <div class="video-wrapper">
+                <iframe id="overlay-video" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 
