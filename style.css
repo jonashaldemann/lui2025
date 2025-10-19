@@ -1,43 +1,107 @@
+/* --- Nudica Light einbinden --- */
+@font-face {
+    font-family: 'Nudica';
+    src: url('fonts/nudica-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* --- Schrift für die ganze Seite anwenden --- */
+body {
+    font-family: 'Nudica', Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+
+.header p {
+    margin: 10px 0;
+    line-height: 1.6;
+    font-size: 16px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Card Container --- */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
     margin-top: 40px;
+    justify-items: center;
 }
 
+/* --- Einzelne Cards --- */
 .card {
-    background-color: #fff;
-    border-radius: 12px;
+    background-color: #ffffff;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    width: 100%;
+    max-width: 260px;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 .card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
+    display: block;
 }
 
+/* --- Inhalt innerhalb der Card --- */
 .card-content {
-    padding: 15px;
+    padding: 15px 12px;
     text-align: center;
 }
 
 .card h3 {
+    font-family: 'Nudica', Arial, sans-serif;
     font-size: 18px;
-    color: #333;
-    margin: 10px 0;
+    color: #222;
+    margin: 12px 0 6px 0;
 }
 
 .card p {
+    font-family: 'Nudica', Arial, sans-serif;
     font-size: 14px;
-    color: #666;
+    color: #555;
     line-height: 1.5;
+    margin: 0;
+}
+
+/* --- Videos --- */
+.video-container {
+    margin-top: 40px;
+}
+
+.video-container iframe {
+    display: none;
+    width: 80%;
+    max-width: 560px;
+    height: 315px;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+/* --- Responsive Anpassungen --- */
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 200px;
+    }
 }
