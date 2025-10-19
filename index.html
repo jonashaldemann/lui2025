@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Webseite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Meine Mini-Webseite</h1>
+
+    <div class="button-container">
+        <button onclick="playVideo('video1')">Video 1</button>
+        <button onclick="playVideo('video2')">Video 2</button>
+    </div>
+
+    <div class="video-container">
+        <iframe id="video1" width="560" height="315" 
+                src="https://www.youtube.com/embed/VIDEO_ID_1" 
+                title="YouTube video 1" frameborder="0" allowfullscreen></iframe>
+
+        <iframe id="video2" width="560" height="315" 
+                src="https://www.youtube.com/embed/VIDEO_ID_2" 
+                title="YouTube video 2" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

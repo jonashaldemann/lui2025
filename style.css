@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.button-container {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.video-container iframe {
+    display: none; /* Start: Videos ausgeblendet */
+    margin-top: 20px;
+    max-width: 90%;
+}
