@@ -8,14 +8,14 @@
 </head>
 <body>
     <div class="header">
-        <p>Liebe Lui</p>
+        <p>Liebe [Name] index01</p>
         <p>Härzlechi Gratulation zu dim 9. Geburtstag!<br>
         O für das Jahr hani es paar Vorschleg fürne Usflug zämegstellt und drzue git's immer es Video. Nimm dir Zyt zum entdecke, was di würd interessiere. Du chasch mirs ja när schribe oder mir FaceTime mau zäme.</p>
-        <p>Liebe Gruess<br>Götti Jonas</p>
+        <p>Liebe Gruess<br>[Absender]</p>
     </div>
 
     <div class="card-container">
-        <div class="card" data-video="dHBRFGmZP7Y">
+        <div class="card" data-video="dHBRFGmZP7Y" data-preview="images/technorama.jpg">
             <img src="images/technorama.jpg" alt="Technorama">
             <div class="card-content">
                 <h3>Technorama</h3>
@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="card" data-video="OBMTVTehNlI">
+        <div class="card" data-video="OBMTVTehNlI" data-preview="images/verkehrshaus.png">
             <img src="images/verkehrshaus.png" alt="Verkehrshaus Luzern">
             <div class="card-content">
                 <h3>Verkehrshaus Luzern</h3>
@@ -33,11 +33,14 @@
     </div>
 
     <!-- Overlay -->
-    <div id="video-overlay" class="overlay" onclick="closeVideo(event)">
+    <div id="video-overlay" class="overlay">
         <div class="overlay-content">
-            <span class="close-btn" onclick="closeVideo(event)">&times;</span>
+            <span class="close-btn">&times;</span>
             <div class="video-wrapper">
-                <iframe id="overlay-video" src="" frameborder="0" allowfullscreen></iframe>
+                <div class="video-placeholder">
+                    <img src="" alt="Video Vorschaubild">
+                    <button class="play-btn">▶</button>
+                </div>
             </div>
         </div>
     </div>

@@ -5,7 +5,6 @@
     font-weight: 300;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Nudica';
     src: url('fonts/nudica-medium-webfont.ttf') format('truetype');
@@ -13,7 +12,7 @@
     font-style: normal;
 }
 
-/* --- Seite allgemein --- */
+/* --- Allgemeines --- */
 body {
     font-family: 'Nudica', Arial, sans-serif;
     background-color: #f8f8f8;
@@ -23,21 +22,10 @@ body {
     text-align: center;
 }
 
-/* --- Header / erste Zeile mit Medium --- */
-.header p:first-child {
-    font-weight: 500;
-    font-size: 20px;
-    margin-bottom: 15px;
-}
+.header p:first-child { font-weight: 500; font-size: 20px; margin-bottom: 15px; }
+.header p:not(:first-child) { font-weight: 300; font-size: 16px; line-height: 1.6; }
 
-/* --- Rest bleibt Light --- */
-.header p:not(:first-child) {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* --- Card Container --- */
+/* --- Cards --- */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -46,12 +34,11 @@ body {
     justify-items: center;
 }
 
-/* --- Einzelne Cards --- */
 .card {
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     width: 100%;
@@ -60,89 +47,34 @@ body {
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-}
+.card img { width:100%; height:180px; object-fit:cover; display:block; }
+.card-content { padding: 15px 12px; text-align:center; }
+.card h3 { font-size:18px; color:#222; margin:12px 0 6px 0; }
+.card p { font-size:14px; color:#555; line-height:1.5; margin:0; }
 
-/* --- Inhalt innerhalb der Card --- */
-.card-content {
-    padding: 15px 12px;
-    text-align: center;
-}
-
-.card h3 {
-    font-family: 'Nudica', Arial, sans-serif;
-    font-size: 18px;
-    color: #222;
-    margin: 12px 0 6px 0;
-}
-
-.card p {
-    font-family: 'Nudica', Arial, sans-serif;
-    font-size: 14px;
-    color: #555;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* --- Overlay Hintergrund --- */
+/* --- Overlay --- */
 .overlay {
-    display: none;
-    position: fixed;
-    top:0; left:0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    display:none; position:fixed; top:0; left:0;
+    width:100%; height:100%; background: rgba(0,0,0,0.7);
+    justify-content:center; align-items:center; z-index:1000;
 }
 
-/* --- Overlay Inhalt --- */
 .overlay-content {
-    position: relative;
-    width: 90%;
-    max-width: 720px;
-    max-height: 80vh;
-    background: #000;
-    border-radius: 12px;
+    position:relative; width:90%; max-width:720px; max-height:80vh; background:#000; border-radius:12px;
 }
 
-/* --- Close Button --- */
 .close-btn {
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    font-size: 28px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 1010;
+    position:absolute; top:8px; right:12px; font-size:28px; color:#fff; cursor:pointer; z-index:1010;
 }
 
-/* --- Video Wrapper für 16:9 Verhältnis --- */
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-}
+/* --- Video Placeholder --- */
+.video-wrapper { position:relative; width:100%; padding-bottom:56.25%; height:0; }
+.video-placeholder { position:absolute; top:0; left:0; width:100%; height:100%; display:flex; justify-content:center; align-items:center; flex-direction:column; background:#000; border-radius:12px; }
+.video-placeholder img { width:100%; height:100%; object-fit:cover; border-radius:12px; }
+.play-btn { position:absolute; font-size:50px; color:white; background:transparent; border:none; cursor:pointer; }
 
-.video-wrapper iframe {
-    position: absolute;
-    top:0; left:0;
-    width:100%;
-    height:100%;
-    border-radius: 12px;
-}
-
-/* --- Responsive Anpassungen --- */
-@media (max-width: 600px) {
-    .card-container {
-        grid-template-columns: 1fr;
-    }
-}
+/* --- Responsive --- */
+@media (max-width:600px){ .card-container { grid-template-columns:1fr; } }
